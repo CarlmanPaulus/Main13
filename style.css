@@ -1,0 +1,252 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E8B57; /* Green table background */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Game Container Grid */
+#gameContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    height: 88vh;
+    width: 98vw;
+    margin: auto;
+    /* border: 2px dashed red; */
+}
+
+/* Player Containers */
+.player-container {
+    /* border: 2px solid #333; */
+    padding: 10px;
+    background: rgba(46, 139, 87, 0.8); /* Transparent green */
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* H2H Table Styling */
+.table-container {
+    grid-column: 1 / 5; /* Span over the left side (two columns) */
+    grid-row: 13 / 15; /* Positioned at the bottom-left */
+    margin-top: 1px;
+    justify-self: center; /* Center horizontally */
+    align-self: center;   /* Center vertically */
+}
+
+
+/* H2H Table Styling */
+.rank-container {
+    grid-column: 14/16; /* Span over the left side (two columns) */
+    grid-row: 11 / 13; /* Positioned at the bottom-left */
+    margin-top: 20px;
+    justify-self: center; /* Center horizontally */
+    align-self: center;   /* Center vertically */
+}
+
+/* Assign Grid Positions */
+#player1 { grid-column: 2/6; grid-row: 1/6; }
+#player2 { grid-column: 7/11; grid-row: 1/6; }
+#player3 { grid-column: 12/16; grid-row: 1/6; }
+
+/* Player 4 (User) Section */
+#player4 {
+    grid-column: 4 / 14; /* Centered */
+    grid-row: 9 / 17; /* Positioned at the bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center; /* Center horizontally */
+    align-self: center;   /* Center vertically */
+    gap: 1px;
+}
+
+/* Hand Sections */
+.hand-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin-bottom: 1px;
+    border: 1px solid rgb(205, 245, 231);
+    padding: 1px;
+    border-radius: 10px;
+}
+
+/* Card Styling */
+.card {
+    width: 60px;
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Card Styling for Player 4 */
+#player4 .card {
+    width: 65px; /* Slightly larger for player 4 */
+    border-radius: 8px; /* More rounded corners */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease; /* Add smooth shadow transition */
+    cursor: pointer;
+    background-color: #fff; /* Make it stand out with a white background */
+    border: 2px solid #007bff; /* Add a blue border to highlight cards */
+}
+
+/* Hover Effect for Player 4's Cards */
+#player4 .card:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Blue shadow on hover */
+}
+
+/* Highlight selected cards for Player 4 */
+#player4 .card.selected {
+    border: 3px solid #ffcc00; /* Gold border for selected cards */
+    transform: scale(1.15); /* Slightly bigger for selected cards */
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7); /* Gold glow effect */
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+}
+
+
+/* Highlight selected cards */
+.card.selected {
+    border: 3px solid yellow;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px yellow;
+}
+
+
+
+/* User Deck */
+#userDeck {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    flex-wrap: wrap;
+    padding: 3px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* User Hand Sections */
+.user-hand-line {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    margin-top: 1px;
+    flex-wrap: wrap;
+}
+
+/* Button Styling */
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Sorting Buttons for User */
+.sort-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sort-buttons button {
+    background-color: #f39c12;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sort-buttons button:hover {
+    background-color: #e67e22;
+}
+
+
+
+.h2h-table {
+    width: 20%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    margin: 0 auto;
+}
+
+.h2h-table th, .h2h-table td {
+    border: 1px solid #ddd;
+    padding: 3px;
+    text-align: center;
+}
+
+.h2h-table th {
+    background-color: #333;
+    color: white;
+}
+
+/* Final Ranking Table */
+.ranking-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    font-size: 0.9em;
+}
+
+.ranking-table th {
+    background-color: #444;
+    color: white;
+}
+
+.ranking-table td, .ranking-table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.ranking-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Score Highlight */
+.win {
+    color: green;
+    font-weight: bold;
+}
+
+.lose {
+    color: red;
+    font-weight: bold;
+}
+
+.tie {
+    color: rgb(162, 189, 11);
+    font-weight: bold;
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game (JavaScript Only)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Game Container -->
+    <div id="gameContainer">
+        <div id="player1" class="player-container"></div>
+        <div id="player2" class="player-container"></div>
+        <div id="player3" class="player-container"></div>
+
+        <!-- Player 4 (User) Section -->
+        <div id="player4" class="player-container">
+            
+            
+            <!-- <div id="frontHand" class="hand-section">
+                <h4>Front Hand (3)</h4>
+            </div>
+            <div id="midHand" class="hand-section">
+                <h4>Mid Hand (5)</h4>
+            </div>
+            <div id="backHand" class="hand-section">
+                <h4>Back Hand (5)</h4>
+            </div> -->
+
+            <!-- User's Available Cards -->
+            <!-- <div id="userDeck" class="user-hand-line">
+                <h4>Available Cards</h4>
+            </div> -->
+
+            <!-- Confirm Button for Card Arrangement -->
+            <button id="confirmArrangement" style="display:none;">Confirm Arrangement</button>
+            
+        </div>
+
+        <!-- H2H Table -->
+        <div id="h2hTablesContainer" class="table-container">
+            <h2></h2>
+            <table id="h2hTable" class="h2h-table">
+                <thead>
+                  </thead>
+                <tbody>
+                    <!-- Dynamic content for matches will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Final Ranking Table -->
+        <div id="finalRankingContainer" class="rank-container">
+            <h2></h2>
+            <table id="finalRankingTable" class="ranking-table">
+                <thead>
+ 
+
+                </thead>
+                <tbody>
+                    <!-- Rankings will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Game Control Buttons -->
+    <div class="button-container">
+        <button id="shuffleDealButton">Shuffle</button>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="deal.js" defer></script>
+    <script src="display.js" defer></script>
+    <script src="arrange.js" defer></script>
+    <script src="rules.js" defer></script>
+    <script src="strongest.js" defer></script>
+    <script src="updateDF.js" defer></script>
+    <script src="userplayer.js" defer></script>
+    <script src="scoresystem.js" defer></script>
+    <script src="button.js" defer></script>
+
+</body>
+</html>
