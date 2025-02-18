@@ -10,8 +10,8 @@ suits.forEach(suit => {
             rank: rank,
             suit: suit,
             value: index + 2, // A = 14, 2 = 2, ..., K = 13
-            image: `/cards/${rank}${suit}.svg`
-            // image: `https://raw.githubusercontent.com/CarlmanPaulus/Main13/master/cards/${rank}${suit}.svg`
+            // image: `/cards/${rank}${suit}.svg`
+            image: `https://raw.githubusercontent.com/CarlmanPaulus/Main13/master/cards/${rank}${suit}.svg`
         });
     });
 });
